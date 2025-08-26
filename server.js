@@ -38,10 +38,17 @@ app.post("/answer", (req, res) => {
 
 // Just to check stored answers
 app.get("/answers", (req, res) => {
-  res.json(answers);
+
+});
+
+app.get("/reset", (req, res) => {
+  answers = {};       // clear all stored answers
+  currentIndex = 0;   // reset index back to start
+  res.json({ message: "✅ Answers and index reset" });
 });
 
 const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+//TEST CHANGE
