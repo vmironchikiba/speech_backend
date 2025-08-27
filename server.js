@@ -38,7 +38,7 @@ app.post("/answer", (req, res) => {
 
 // Just to check stored answers
 app.get("/answers", (req, res) => {
-
+  res.json(answers)
 });
 
 app.get("/reset", (req, res) => {
